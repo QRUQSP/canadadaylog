@@ -46,8 +46,9 @@ function qruqsp_canadadaylog_qsoSearch($ciniki) {
         . "qruqsp_canadadaylog_qsos.qso_dt, "
         . "DATE_FORMAT(qruqsp_canadadaylog_qsos.qso_dt, '%b %d %H:%i') AS qso_dt_display, "
         . "qruqsp_canadadaylog_qsos.callsign, "
-        . "qruqsp_canadadaylog_qsos.class, "
-        . "qruqsp_canadadaylog_qsos.section, "
+        . "qruqsp_canadadaylog_qsos.recv_rst, "
+        . "qruqsp_canadadaylog_qsos.recv_prov_serial, "
+        . "qruqsp_canadadaylog_qsos.sent_rst, "
         . "qruqsp_canadadaylog_qsos.band, "
         . "qruqsp_canadadaylog_qsos.mode, "
         . "qruqsp_canadadaylog_qsos.frequency, "
@@ -67,7 +68,8 @@ function qruqsp_canadadaylog_qsoSearch($ciniki) {
     ciniki_core_loadMethod($ciniki, 'ciniki', 'core', 'private', 'dbHashQueryArrayTree');
     $rc = ciniki_core_dbHashQueryArrayTree($ciniki, $strsql, 'qruqsp.canadadaylog', array(
         array('container'=>'qsos', 'fname'=>'id', 
-            'fields'=>array('id', 'qso_dt', 'qso_dt_display', 'callsign', 'class', 'section', 'band', 'mode', 'frequency', 'operator')),
+            'fields'=>array('id', 'qso_dt', 'qso_dt_display', 'callsign', 
+                'recv_rst', 'recv_prov_serial', 'sent_rst', 'band', 'mode', 'frequency', 'operator')),
         ));
     if( $rc['stat'] != 'ok' ) {
         return $rc;
