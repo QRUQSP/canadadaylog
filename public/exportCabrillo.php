@@ -69,7 +69,7 @@ function qruqsp_canadadaylog_exportCabrillo($ciniki) {
         . "qruqsp_canadadaylog_qsos.operator "
         . "FROM qruqsp_canadadaylog_qsos "
         . "WHERE qruqsp_canadadaylog_qsos.tnid = '" . ciniki_core_dbQuote($ciniki, $args['tnid']) . "' "
-        . "AND YEAR(qso_dt) = 2020 "
+        . "AND YEAR(qso_dt) = 2021 "
         . "ORDER BY qso_dt ASC "
         . "";
     ciniki_core_loadMethod($ciniki, 'ciniki', 'core', 'private', 'dbHashQueryArrayTree');
@@ -162,14 +162,14 @@ function qruqsp_canadadaylog_exportCabrillo($ciniki) {
     $cabrillo .= "ADDRESS-POSTALCODE: " . (isset($settings['postal']) ? $settings['postal'] : '') . "\r\n";
     $cabrillo .= "ADDRESS-COUNTRY: " . (isset($settings['country']) ? $settings['country'] : '') . "\r\n";
 
-    $cabrillo .= "CREATED-BY: QRUQSP.org CanadaDayLogger2020\r\n";
+    $cabrillo .= "CREATED-BY: QRUQSP.org CanadaDayLogger2021\r\n";
 
     $cabrillo .= $cabrillo_qsos;
     $cabrillo .= "END-OF-LOG:\r\n";
 
     header('Last-Modified: ' . gmdate('D, d M Y H:i:s') . ' GMT', true, 200);
     header("Content-type: text/plain");
-    header('Content-Disposition: attachment; filename="canadaday2020.log"');
+    header('Content-Disposition: attachment; filename="canadaday2021.log"');
 
     print $cabrillo;
     

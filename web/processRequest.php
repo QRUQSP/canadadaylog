@@ -50,7 +50,7 @@ function qruqsp_canadadaylog_web_processRequest(&$ciniki, $settings, $tnid, $arg
         $strsql = "SELECT DISTINCT section "
             . "FROM qruqsp_canadadaylog_qsos "
             . "WHERE qruqsp_canadadaylog_qsos.tnid = '" . ciniki_core_dbQuote($ciniki, $tnid) . "' "
-            . "AND YEAR(qso_dt) = 2020 "
+            . "AND YEAR(qso_dt) = 2021 "
             . "ORDER BY section "
             . "";
         ciniki_core_loadMethod($ciniki, 'ciniki', 'core', 'private', 'dbQueryList');
@@ -167,7 +167,7 @@ function qruqsp_canadadaylog_web_processRequest(&$ciniki, $settings, $tnid, $arg
         $strsql = "SELECT DISTINCT section "
             . "FROM qruqsp_canadadaylog_qsos "
             . "WHERE qruqsp_canadadaylog_qsos.tnid = '" . ciniki_core_dbQuote($ciniki, $tnid) . "' "
-            . "AND YEAR(qso_dt) = 2020 "
+            . "AND YEAR(qso_dt) = 2021 "
             . "ORDER BY section "
             . "";
         ciniki_core_loadMethod($ciniki, 'ciniki', 'core', 'private', 'dbQueryList');
@@ -233,7 +233,7 @@ function qruqsp_canadadaylog_web_processRequest(&$ciniki, $settings, $tnid, $arg
             . "qruqsp_canadadaylog_qsos.operator "
             . "FROM qruqsp_canadadaylog_qsos "
             . "WHERE qruqsp_canadadaylog_qsos.tnid = '" . ciniki_core_dbQuote($ciniki, $tnid) . "' "
-            . "AND YEAR(qso_dt) = 2020 "
+            . "AND YEAR(qso_dt) = 2021 "
             . "ORDER BY qso_dt DESC "
             . "";
         ciniki_core_loadMethod($ciniki, 'ciniki', 'core', 'private', 'dbHashQueryArrayTree');
