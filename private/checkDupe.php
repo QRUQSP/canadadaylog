@@ -30,7 +30,7 @@ function qruqsp_canadadaylog_checkDupe(&$ciniki, $tnid, $args) {
         . "qruqsp_canadadaylog_qsos.notes "
         . "FROM qruqsp_canadadaylog_qsos "
         . "WHERE qruqsp_canadadaylog_qsos.tnid = '" . ciniki_core_dbQuote($ciniki, $tnid) . "' "
-        . "AND YEAR(qso_dt) = 2021 "
+        . "AND YEAR(qso_dt) = 2022 "
         . "AND qruqsp_canadadaylog_qsos.callsign = '" . ciniki_core_dbQuote($ciniki, $args['callsign']) . "' "
         . "AND qruqsp_canadadaylog_qsos.band = '" . ciniki_core_dbQuote($ciniki, $args['band']) . "' "
         . "AND qruqsp_canadadaylog_qsos.mode = '" . ciniki_core_dbQuote($ciniki, $args['mode']) . "' "

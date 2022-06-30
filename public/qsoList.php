@@ -63,7 +63,7 @@ function qruqsp_canadadaylog_qsoList($ciniki) {
         . "qruqsp_canadadaylog_qsos.notes "
         . "FROM qruqsp_canadadaylog_qsos "
         . "WHERE qruqsp_canadadaylog_qsos.tnid = '" . ciniki_core_dbQuote($ciniki, $args['tnid']) . "' "
-        . "AND YEAR(qso_dt) = 2021 "
+        . "AND YEAR(qso_dt) = 2022 "
         . "ORDER BY qso_dt DESC "
         . "";
     ciniki_core_loadMethod($ciniki, 'ciniki', 'core', 'private', 'dbHashQueryArrayTree');

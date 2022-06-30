@@ -55,7 +55,7 @@ function qruqsp_canadadaylog_qsoSearch($ciniki) {
         . "qruqsp_canadadaylog_qsos.operator "
         . "FROM qruqsp_canadadaylog_qsos "
         . "WHERE qruqsp_canadadaylog_qsos.tnid = '" . ciniki_core_dbQuote($ciniki, $args['tnid']) . "' "
-        . "AND YEAR(qso_dt) = 2021 "
+        . "AND YEAR(qso_dt) = 2022 "
         . "AND ("
             . "callsign LIKE '" . ciniki_core_dbQuote($ciniki, $args['start_needle']) . "%' "
             . "OR callsign LIKE '% " . ciniki_core_dbQuote($ciniki, $args['start_needle']) . "%' "
